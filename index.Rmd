@@ -1,7 +1,7 @@
 ---
-title: "Simulating coordination <br> among LLM agents"
-author: "David Garcia <br> <br> *ETH Zurich*"
-date: "Social Data Science"
+title: "Network structures and collective behavior of AI agents"
+author: "David Garcia <br> *University of Konstanz <br>  also at: Barcelona Supercomputing Center <br>  Complexity Science Hub Vienna*"
+date: "slides at dgarcia.eu/LLM-consensus"
 output:
   xaringan::moon_reader:
     lib_dir: libs 
@@ -31,43 +31,80 @@ style_mono_accent(
 options(htmltools.dir.version = FALSE)
 ```
 
+
+background-image: url(figures/AboutUS.svg)
+background-size: 98%
+---
+
 layout: true
-<div class="my-footer"><span>David Garcia - Social Data Science - ETH Zurich</span></div> 
+<div class="my-footer"><span><a href="https://arxiv.org/abs/2409.02822"> AI agents can coordinate beyond human scale. G de Marzo, C. Castellano, D. Garcia. Arxiv preprint (2025)</a></span></div> 
+
 
 ---
 
-# LLMs Within Society
+# Outline
+
+# 1. Collective behavior of AI agents
+
+# 2. Short overview of AI agents projects
+
+
+---
+
+## Understanding Online Collective Behavior
+
+.pull-left[![:scale 93%](figures/CollectiveEmotionsParis.svg)
+- Analysis of collective emotions
+- Focus on social media data
+- (Affective) polarization dynamics
+
+]
+
+.pull-right[.center[![:scale 96%](figures/ABM.svg)]
+
+- **Agent-Based Modelling (ABM)**  
+- Explaining macro-level phenomena forom micro-level dynamics
+- Now in combination with LLMs
+]
+
+
+---
+# AI agents: LLMs Within Society
 
 .center[![:scale 88%](figures/AIeverywhere.png)]
-- AI agents promise to interact with each other in our behalf
+- AI "chiefs of staff" promise to interact with each other in our behalf
 - Coordination and competition (reservations, negotiations, applications)
 - **Could norms emerge, for example rules to be more efficient?** 
 - **Could they have systemic risks, like flash crashes?**
 
 ---
 
-# LLMs as Social Brains
+# The Social LLM Hypothesis
+
 .pull-left[![:scale 100%](figures/DunbarQuestion.svg)]
 .pull-right[
 
 - Group formation and sustainability: size depends on cognitive ability
-
-
 - Memory of identity to predict behavior and cooperation
-
-
-- Essential coordination on arbitrary norms without ground truth
-  - E.g. pack moves left or right
-
-
 - Language as a tool for humans to make larger groups:
   - Dunbar's number (150-250)
 
-
+** Our questions:**
+- Typical cohesive group size of AI agents?
+- Does it scale with with cognitive/language abilities?
 ]
+
 ---
 
-# Opinion Dynamics in LLM Agents
+# Coordination and Critical Group Size
+
+.center[![:scale 80%](figures/Fish.png)]
+
+Coordination: When the option does not matter, what matters is staying together
+
+---
+
+# Coordination Dynamics in LLM Agents
 .pull-left[.center[![:scale 75%](figures/OP.png)]]
 .pull-right[
 - Simulation of a tight group of N interacting agents
@@ -80,8 +117,32 @@ layout: true
 
 ---
 
+# Detailed Prompt for Simulation
+> Below you can see the list of all your friends together
+with the opinion they support.  
+<br>
+You must reply with the opinion you want to support.
+The opinion must be reported between square brackets.  
+<br>
+X7v A  
+keY B  
+91c B  
+gew A  
+4lO B  
+...  
+Reply only with the opinion you want to support, between
+square brackets.
+
+---
+# Coordination and Group Size
+.center[![:scale 85%](figures/splitting.png)]
+- Simulating splitting by options (e.g. right/left) leads to stable groups
+- What is the maximum group size that allows AI agents to stay together?
+
+---
+
 # LLM-Dependent Consensus Formation
-.center[![:scale 75%](figures/Consensus.png)]
+.center[![:scale 60%](figures/Consensus.png)]
 Some LLMs can reach consensus for completely arbitrary decisions (50 agents)
 
 ---
@@ -92,28 +153,9 @@ Some LLMs can reach consensus for completely arbitrary decisions (50 agents)
 Agent opinion changes follow an S-function parametrized by a majority force $\beta$
 ---
 
-# Majority Force Factors
-.center[![:scale 95%](figures/plot2.png)]
-- Majority force is higher for models with higher language understanding capabilities (MMLU benchmark)
-- Majority force decreases for larger group sizes
-
----
-
-# Ising model warning
-
-</br>
-
-> <font size="45">
-No please, not another Ising model
-</font> 
-
-</br>
-
-*<div style="text-align: right"> 
-David Garcia, Vienna, 2017-2020, every week
-</div>*
-
-
+# Majority Force and Group Size
+  .center[![:scale 87%](figures/Consensus2.png)]
+- Majority force decreases for larger group sizes: Three kinds of states
 
 ---
 ## Critical Group Size and Consensus Time $T_c$
@@ -122,44 +164,140 @@ David Garcia, Vienna, 2017-2020, every week
 - Analysis of critical group size $N_c$
 
 
-- $N>N_c$: time to consensus grows expontentially with $N$
+- $N>N_c$: time to consensus $T_c$ grows exponentially with $N$
 
 
 - Above critical size, consensus is unfeasible and happens only by chance
 
 
-- $T_c$ can be calculated from $\beta$ as in the Curie-Weiss model (i.e. time to magnetization as a function of inverse temperature)
+- $T_c$ can be calculated from $\beta$ as in an Ising Model (i.e. time to magnetization as a function of inverse temperature)
 
 - $N_c$ can be derived from  $\beta$ as the point of phase transition of $T_c$ ( $\beta_c=1$ )
 
 
 ---
 
-# Group Size and Language Understanding
-.pull-right[![:scale 90%](figures/Scaling.png)]
+## Group Size and Language Understanding
+.pull-right[![:scale 95%](figures/Scaling.png)]
 
 - Analysis of majority force and exhaustive simulations to measure **critical consensus size**
 
-- Exponential function of MMLU benchmark
+- Exponential function of MMLU benchmark: **language understanding**
 
-- Humans close to the line
+- Two different scalings?
 
-- GPT4 and Claude 3.5 Sonnet reach consensus for $N=1000$
+- GPT-4 and Claude 3.5 Sonnet reach consensus for $N=1000$
   - LLM emergent consensus scale beyond humans
 
 
 ---
 
+# Short overview of AI agents projects
+
+# 1. Collective behavior of AI agents
+
+# *2. Short overview of AI agents projects*
+
+---
+
+
+## Collective misalignment
+
+Coordination paradigm with real issues. E.g.: open borders / closed borders, universal healthcare / private healthcare, tax the rich / lower taxes
+
+.center[![:scale 100%](figures/misalignment1.png)]
+
+- Opinion 1: gender self-identification / Opinion 2: biological sex classification
+- The model prefers one option (gender self-identification)
+- But if the initial group is mostly for option 2, it can stay in that state
+---
+
+## Issue-dependent bias and majority force
+
+.center[![:scale 58%](figures/misalignment2.png)]
+
+---
+
+## Testing the conformity paradigm with LLMs
+.center[![:scale 100%](figures/conformity1.png)]
+- People around choose the different line, wrong color, or box with different number of points
+- Social Impact Theory for humans: conformity increases with number of people wrong, their similarity, social strength, etc...
+---
+
+## Examples of conformity among AI agents
+.center[![:scale 98%](figures/conformity2.png)]
+- AI agents conform more than humans (100% vs 30%) and are  sensitive to identity of sources and social context
+---
+
+## **WHAT-IF:** Social simulation with **Generative ABM**
+
+.center[![:scale 65%](figures/WHAT-IF.png)]
+
+---
+
+
+
+# The Collective Turing Test
+
+.center[![:scale 65%](figures/CTT1.png)]
+---
+
+
+
+# LLMs can simulate online discussions
+
+.center[![:scale 100%](figures/CTT2.png)]
+
+Participants cannot distinguish conversations created with Llama 3 from human conversations
+
+---
+
+
+## Generative agents in an online social network
+.center[![:scale 75%](figures/LLMGrowth.png)]
+
+---
+
+
+# Scale-free online social networks
+
+.pull-left[![:scale 100%](figures/Twitter.png)]
+.pull-right[
+
+- Probability distribution of in-degrees (e.g. number of followers)
+- Scale-free networks with power-law degree distributions:
+$$ p(k) \sim k ^ {-\gamma} $$
+- **Variance of degree distribution grows with network size**
+- **No epidemic threshold: persistent infectious outbreaks**
+
+]
+
+[A Model for Scale-Free Networks: Application to Twitter. S. Aparicio, J. Villazón-Terrazas, G. Álvarez. Entropy (2015)](https://www.mdpi.com/1099-4300/17/8/5848)
+
+---
+
+# Network structures and interface design
+
+.center[![:scale 100%](figures/LLMnet2.png)]
+
+---
+
+
 # Summary
 
+- Generative agents can create realistic social network degree distributions
 - LLM consensus scale predicted by language understanding capabilities
 - LLMs can reach emergent consensus at scales beyond humans
 - **Opportunity: decision-making or coordination?**
 - **Risk: undesired synchronization like a flash crash?**
 - **Future: Social simulation with LLMs **
 
-<a href="https://arxiv.org/abs/2409.02822"> Language Understanding as a Constraint on Consensus Size in LLM Societies. G de Marzo, C. Castellano, D. Garcia. Arxiv (2014) </a>
+<a href="https://arxiv.org/abs/2312.06619"> Emergence of Scale-Free Networks in Social Interactions among Large Language Models. G. De Marzo, L. Pietronero, D. Garcia. Arxiv (2023) </a>
+
+<a href="https://arxiv.org/abs/2409.02822"> AI agents can coordinate beyond human scale. G de Marzo, C. Castellano, D. Garcia. Arxiv (2025) </a>
 
 .center[**More at: [www.dgarcia.eu](https://dgarcia.eu)**]
 .center[**[Bluesky: @dgarcia.eu](https://bsky.app/profile/dgarcia.bsky.social)**]
+
+
 
