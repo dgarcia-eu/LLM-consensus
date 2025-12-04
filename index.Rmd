@@ -262,7 +262,7 @@ Coordination paradigm with real issues. E.g.: open borders / closed borders, uni
 
 # LLMs can simulate online discussions
 
-.center[![:scale 100%](figures/CTT2.png)]
+.center[![:scale 95%](figures/CTT2.png)]
 
 Participants cannot distinguish conversations created with Llama 3 from human conversations
 
@@ -271,19 +271,18 @@ Participants cannot distinguish conversations created with Llama 3 from human co
 
 # Summary
 
-- Generative agents can create realistic social network degree distributions
+- AI agents show conformity as humans
 - LLM consensus scale predicted by language understanding capabilities
 - LLMs can reach emergent consensus at scales beyond humans
 - **Opportunity: decision-making or coordination?**
 - **Risk: undesired synchronization like a flash crash?**
 - **Future: Social simulation with LLMs **
 
-<a href="https://arxiv.org/abs/2312.06619"> Emergence of Scale-Free Networks in Social Interactions among Large Language Models. G. De Marzo, L. Pietronero, D. Garcia. Arxiv (2023) </a>
-
 <a href="https://arxiv.org/abs/2409.02822"> AI agents can coordinate beyond human scale. G de Marzo, C. Castellano, D. Garcia. Arxiv (2025) </a>
 
-.center[**More at: [www.dgarcia.eu](https://dgarcia.eu)**]
-.center[**[Bluesky: @dgarcia.eu](https://bsky.app/profile/dgarcia.bsky.social)**]
+<a href="https://arxiv.org/abs/2511.08592"> The Collective Turing Test: Large Language Models Can Generate Realistic Multi-User Discussions. A. Bouleimen, G. De Marzo, T. Kim, N. Pagan, H. Metzler, S. Giordano, D. Garcia. Arxiv preprint (2025) </a>
+
+.center[**More at: [www.dgarcia.eu](https://dgarcia.eu)**, **[Bluesky: @dgarcia.eu](https://bsky.app/profile/dgarcia.bsky.social)**]
 
 
 
